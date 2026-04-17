@@ -22,12 +22,14 @@ export function HeroSection() {
         <p className="mt-6 font-heading text-[24px] font-normal text-white/90 md:text-[28px] xl:text-[36px]">
           {heroContent.subtitle}
         </p>
-        <PrimaryButton className="mt-16 w-[225px]">{heroContent.cta}</PrimaryButton>
+        <a href="#cases" className="mt-16 inline-flex">
+          <PrimaryButton className="w-[225px]">{heroContent.cta}</PrimaryButton>
+        </a>
         <img
           src={arrowDown}
           alt=""
           aria-hidden="true"
-          className="mt-40 h-8 w-8"
+          className="mt-24 h-8 w-8 md:mt-32 xl:mt-40"
         />
       </div>
     </section>

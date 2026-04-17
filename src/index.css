@@ -36,3 +36,13 @@ button {
   border: 0;
   cursor: pointer;
 }
+
+@media (min-width: 1280px) {
+  html {
+    background: #ffffff;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+}
