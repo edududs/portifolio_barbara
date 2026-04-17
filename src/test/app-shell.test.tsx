@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import App from '../App'
 
 describe('App shell', () => {
@@ -12,11 +12,14 @@ describe('App shell', () => {
     expect(
       screen.getByText('Estética, Movimento, Estratégia.')
     ).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Sobre' })).toHaveAttribute(
+
+    const primaryNav = screen.getByRole('navigation', { name: 'Primária' })
+
+    expect(within(primaryNav).getByRole('link', { name: 'Sobre' })).toHaveAttribute(
       'href',
       '#sobre'
     )
-    expect(screen.getByRole('link', { name: 'Serviços' })).toHaveAttribute(
+    expect(within(primaryNav).getByRole('link', { name: 'Serviços' })).toHaveAttribute(
       'href',
       '#servicos'
     )
