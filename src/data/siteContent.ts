@@ -35,3 +35,22 @@ export const aboutContent = {
     'Meu trabalho vai além do superficial. Cada projeto é uma oportunidade de criar narrativas visuais que não apenas encantam, mas convertem. É sobre entender profundamente sua marca, seu público e seus objetivos para criar experiências que deixam marca.'
   ]
 } as const
+
+export const specialties = [
+  {
+    title: 'Moda & Lifestyle',
+    body: 'Narrativas que transformam peças em desejo e lifestyle em experiência de marca.',
+    image: 'fashion'
+  },
+  {
+    title: 'Institucional',
+    body: 'Humanização de marcas através de storytelling autêntico, direção visual e posicionamento claro.',
+    image: 'institutional'
+  }
+] as const
+
+export const ctaContent = {
+  title: 'Pronto para elevar sua marca?',
+  body: 'Vamos conversar sobre como transformar sua visão em uma presença visual memorável e estratégica.',
+  action: 'Iniciar Conversa'
+} as const

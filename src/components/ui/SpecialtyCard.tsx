@@ -1,0 +1,19 @@
+type SpecialtyCardProps = {
+  title: string
+  body: string
+  imageSrc: string
+}
+
+export function SpecialtyCard({ title, body, imageSrc }: SpecialtyCardProps) {
+  return (
+    <article className="max-w-[285px]">
+      <div className="h-[380px] overflow-hidden bg-paper">
+        <img src={imageSrc} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+      </div>
+      <h3 className="mt-4 font-heading text-[32px] font-bold leading-none text-ink">
+        {title}
+      </h3>
+      <p className="mt-4 font-body text-base leading-[1.625] text-ink">{body}</p>
+    </article>
+  )
+}
