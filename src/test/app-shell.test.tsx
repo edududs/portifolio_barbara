@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react'
 import App from '../App'
 
 describe('App shell', () => {
-  it('renders the hero content and primary navigation', () => {
+  it('renders the hero content and primary navigation with a linked CTA', () => {
     render(<App />)
 
     expect(screen.getByRole('banner')).toBeInTheDocument()
@@ -23,8 +23,9 @@ describe('App shell', () => {
       'href',
       '#servicos'
     )
-    expect(
-      screen.getByRole('button', { name: /veja meu trabalho/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /veja meu trabalho/i })).toHaveAttribute(
+      'href',
+      '#cases'
+    )
   })
 })
