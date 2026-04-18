@@ -37,7 +37,7 @@ describe('Reduced motion support', () => {
 
   it('returns viewport-safe values for reduced and full motion modes', () => {
     expect(viewportAmount(true)).toEqual({ once: true, amount: 0 })
-    expect(viewportAmount(false)).toEqual({ once: true, amount: 0.25 })
+    expect(viewportAmount(false)).toEqual({ once: true, amount: 0.2 })
   })
 
   it('keeps the final contact action available under reduced motion', () => {

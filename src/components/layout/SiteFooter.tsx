@@ -9,10 +9,10 @@ export function SiteFooter() {
   return (
     <motion.footer
       className="bg-black pb-16 pt-20 text-white"
-      initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={viewport}
-      transition={{ duration: 0.55, ease: baseEase }}
+      transition={{ duration: 0.58, ease: baseEase }}
     >
       <div className="mx-auto max-w-content px-6 md:px-10 xl:px-16">
         <div className="grid gap-10 md:grid-cols-3">
@@ -33,8 +33,8 @@ export function SiteFooter() {
                   <motion.a
                     href={item.href}
                     className="font-body text-sm text-footerMuted"
-                    whileHover={shouldReduceMotion ? undefined : { x: 2 }}
-                    transition={{ duration: 0.2 }}
+                    whileHover={shouldReduceMotion ? undefined : { x: 3 }}
+                    transition={{ duration: 0.22 }}
                   >
                     {item.label}
                   </motion.a>
@@ -50,8 +50,8 @@ export function SiteFooter() {
             <motion.a
               href="#contato"
               className="mt-4 inline-block font-body text-sm text-footerMuted"
-              whileHover={shouldReduceMotion ? undefined : { x: -2 }}
-              transition={{ duration: 0.2 }}
+              whileHover={shouldReduceMotion ? undefined : { x: -3 }}
+              transition={{ duration: 0.22 }}
             >
               Instagram
             </motion.a>

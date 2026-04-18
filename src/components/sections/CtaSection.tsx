@@ -11,10 +11,10 @@ export function CtaSection() {
   return (
     <Section id="contato" className="bg-white py-24 text-center xl:py-28">
       <motion.div
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
-        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 44, scale: 0.985 }}
+        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
         viewport={viewport}
-        transition={{ duration: 0.7, ease: baseEase }}
+        transition={{ duration: 0.82, ease: baseEase }}
       >
         <h2 className="font-heading text-4xl font-bold text-ink md:text-5xl">
           {ctaContent.title}
@@ -25,8 +25,8 @@ export function CtaSection() {
         <motion.a
           href="mailto:barbara@example.com"
           className="mx-auto mt-14 inline-flex h-[60px] items-center gap-4 bg-black px-10 font-accent text-sm tracking-[0.025em] text-white"
-          whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.01 }}
-          transition={{ duration: 0.25, ease: baseEase }}
+          whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.025 }}
+          transition={{ duration: 0.28, ease: baseEase }}
         >
           <span>{ctaContent.action}</span>
           <img src={arrowRight} alt="" aria-hidden="true" className="h-4 w-4" />
