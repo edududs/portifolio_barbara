@@ -5,7 +5,7 @@ import { baseEase, viewportAmount } from '../../lib/motion'
 import { Section } from '../layout/Section'
 
 export function AboutSection() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = !!useReducedMotion()
   const { scrollYProgress } = useScroll()
   const imageY = useTransform(
     scrollYProgress,

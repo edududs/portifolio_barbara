@@ -12,7 +12,7 @@ const specialtyImages = {
 } as const
 
 export function SpecialtiesSection() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = !!useReducedMotion()
   const viewport = viewportAmount(shouldReduceMotion)
 
   return (

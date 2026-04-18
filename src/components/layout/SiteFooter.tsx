@@ -3,7 +3,7 @@ import { navItems } from '../../data/siteContent'
 import { baseEase, viewportAmount } from '../../lib/motion'
 
 export function SiteFooter() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = !!useReducedMotion()
   const viewport = viewportAmount(shouldReduceMotion)
 
   return (

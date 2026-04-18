@@ -5,7 +5,7 @@ import { Section } from '../layout/Section'
 import { ServiceCard } from '../ui/ServiceCard'
 
 export function ServicesSection() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = !!useReducedMotion()
   const viewport = viewportAmount(shouldReduceMotion)
 
   return (

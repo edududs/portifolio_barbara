@@ -5,7 +5,7 @@ import { baseEase, viewportAmount } from '../../lib/motion'
 import { Section } from '../layout/Section'
 
 export function CtaSection() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = !!useReducedMotion()
   const viewport = viewportAmount(shouldReduceMotion)
 
   return (
