@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'motion/react'
+import { Link } from 'react-router'
 import { navItems } from '../../data/siteContent'
 import { baseEase, viewportAmount } from '../../lib/motion'
 
@@ -30,14 +31,11 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <motion.a
-                    href={item.href}
-                    className="font-body text-sm text-footerMuted"
-                    whileHover={shouldReduceMotion ? undefined : { x: 3 }}
-                    transition={{ duration: 0.22 }}
-                  >
-                    {item.label}
-                  </motion.a>
+                  <motion.div whileHover={shouldReduceMotion ? undefined : { x: 3 }} transition={{ duration: 0.22 }}>
+                    <Link to={item.href} className="font-body text-sm text-footerMuted">
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 </li>
               ))}
             </ul>

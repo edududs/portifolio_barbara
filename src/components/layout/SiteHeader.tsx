@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
 import { navItems } from '../../data/siteContent'
 
 export function SiteHeader() {
@@ -7,12 +8,12 @@ export function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <div className="mx-auto flex h-20 w-full max-w-shell items-center justify-between px-6 md:px-10 xl:px-16">
-        <a
-          href="#topo"
+        <Link
+          to="/"
           className="font-heading text-xl font-bold tracking-[-0.025em] text-[#FFF4F4]"
         >
           Barbara Fonseca
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -26,13 +27,13 @@ export function SiteHeader() {
 
         <nav aria-label="Primária" className="hidden gap-10 md:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               className="font-body text-sm font-medium tracking-[0.025em] text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
@@ -46,13 +47,13 @@ export function SiteHeader() {
           <ul className="space-y-3">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="font-body text-sm font-medium tracking-[0.025em] text-white"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
