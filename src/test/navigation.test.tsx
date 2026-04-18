@@ -1,37 +1,35 @@
 import { render, screen, within } from '@testing-library/react'
-import App from '../App'
+import { MemoryRouter } from 'react-router'
+import AppRoutes from '../AppRoutes'
 
-describe('Navigation and section anchors', () => {
-  it('connects all primary links to section ids and keeps the contact CTA actionable', () => {
-    render(<App />)
+describe('Navigation and routes', () => {
+  it('links the primary Sobre navigation to the dedicated about route', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <AppRoutes />
+      </MemoryRouter>
+    )
 
     const primaryNav = screen.getByRole('navigation', { name: 'Primária' })
 
     expect(within(primaryNav).getByRole('link', { name: 'Sobre' })).toHaveAttribute(
       'href',
-      '#sobre'
+      '/sobre'
     )
-    expect(within(primaryNav).getByRole('link', { name: 'Serviços' })).toHaveAttribute(
-      'href',
-      '#servicos'
-    )
-    expect(within(primaryNav).getByRole('link', { name: 'Cases' })).toHaveAttribute(
-      'href',
-      '#cases'
-    )
-    expect(within(primaryNav).getByRole('link', { name: 'Contato' })).toHaveAttribute(
-      'href',
-      '#contato'
+  })
+
+  it('renders the about page route', () => {
+    render(
+      <MemoryRouter initialEntries={['/sobre']}>
+        <AppRoutes />
+      </MemoryRouter>
     )
 
-    expect(document.getElementById('sobre')).toBeInTheDocument()
-    expect(document.getElementById('servicos')).toBeInTheDocument()
-    expect(document.getElementById('cases')).toBeInTheDocument()
-    expect(document.getElementById('contato')).toBeInTheDocument()
-
-    expect(screen.getByRole('link', { name: 'Iniciar Conversa' })).toHaveAttribute(
-      'href',
-      'mailto:barbara@example.com'
-    )
+    expect(
+      screen.getByRole('heading', {
+        level: 1,
+        name: /a curadora por trás da estratégia/i
+      })
+    ).toBeInTheDocument()
   })
 })
