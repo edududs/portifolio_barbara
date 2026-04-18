@@ -6,7 +6,7 @@ type ServiceCardProps = {
 }
 
 export function ServiceCard({ title, body }: ServiceCardProps) {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = !!useReducedMotion()
 
   return (
     <motion.article
@@ -15,11 +15,11 @@ export function ServiceCard({ title, body }: ServiceCardProps) {
         shouldReduceMotion
           ? undefined
           : {
-              y: -6,
-              scale: 1.01
+              y: -10,
+              scale: 1.02
             }
       }
-      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
     >
       <h3 className="font-heading text-2xl font-bold leading-8">{title}</h3>
       <p className="mt-10 max-w-[288px] font-body text-base leading-[1.625] text-white">

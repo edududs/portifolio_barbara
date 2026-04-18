@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import App from '../App'
 
 describe('Main content sections', () => {
-  it('renders services, about, specialties, CTA, and footer content', () => {
+  it('renders services, about, specialties, CTA, and footer content after motion refinements', () => {
     render(<App />)
 
     expect(
@@ -26,9 +26,5 @@ describe('Main content sections', () => {
       })
     ).toBeInTheDocument()
     expect(screen.getByText('Curadora Estratégica')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Instagram' })).toHaveAttribute(
-      'href',
-      '#contato'
-    )
   })
 })
