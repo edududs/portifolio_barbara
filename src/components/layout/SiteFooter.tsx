@@ -1,8 +1,19 @@
+import { motion, useReducedMotion } from 'motion/react'
 import { navItems } from '../../data/siteContent'
+import { baseEase, viewportAmount } from '../../lib/motion'
 
 export function SiteFooter() {
+  const shouldReduceMotion = useReducedMotion()
+  const viewport = viewportAmount(shouldReduceMotion)
+
   return (
-    <footer className="bg-black pb-16 pt-20 text-white">
+    <motion.footer
+      className="bg-black pb-16 pt-20 text-white"
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={viewport}
+      transition={{ duration: 0.55, ease: baseEase }}
+    >
       <div className="mx-auto max-w-content px-6 md:px-10 xl:px-16">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="max-w-[360px]">
@@ -19,9 +30,14 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="font-body text-sm text-footerMuted">
+                  <motion.a
+                    href={item.href}
+                    className="font-body text-sm text-footerMuted"
+                    whileHover={shouldReduceMotion ? undefined : { x: 2 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     {item.label}
-                  </a>
+                  </motion.a>
                 </li>
               ))}
             </ul>
@@ -31,9 +47,14 @@ export function SiteFooter() {
             <h3 className="font-body text-sm font-semibold tracking-[0.025em] text-white">
               Social
             </h3>
-            <a href="#contato" className="mt-4 inline-block font-body text-sm text-footerMuted">
+            <motion.a
+              href="#contato"
+              className="mt-4 inline-block font-body text-sm text-footerMuted"
+              whileHover={shouldReduceMotion ? undefined : { x: -2 }}
+              transition={{ duration: 0.2 }}
+            >
               Instagram
-            </a>
+            </motion.a>
           </div>
         </div>
 
@@ -41,6 +62,6 @@ export function SiteFooter() {
           © 2026 Barbara Fonseca. Todos os direitos reservados.
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }

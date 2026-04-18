@@ -21,11 +21,10 @@ function createMatchMedia(matches: boolean) {
 describe('Reduced motion support', () => {
   beforeEach(() => {
     matchMediaMock.mockReset()
+    window.matchMedia = createMatchMedia(true)
   })
 
   it('renders the page when reduced motion is enabled', () => {
-    window.matchMedia = createMatchMedia(true)
-
     render(<App />)
 
     expect(
@@ -39,5 +38,17 @@ describe('Reduced motion support', () => {
   it('returns viewport-safe values for reduced and full motion modes', () => {
     expect(viewportAmount(true)).toEqual({ once: true, amount: 0 })
     expect(viewportAmount(false)).toEqual({ once: true, amount: 0.25 })
+  })
+
+  it('keeps the final contact action available under reduced motion', () => {
+    render(<App />)
+
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Pronto para elevar sua marca?' })
+    ).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Iniciar Conversa' })).toHaveAttribute(
+      'href',
+      'mailto:barbara@example.com'
+    )
   })
 })
