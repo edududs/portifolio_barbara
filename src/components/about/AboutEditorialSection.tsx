@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import editorialImage from '../../assets/about-page-editorial.jpg'
+import editorialImage from '../../assets/about-page-editorial.png'
 import { aboutPageEditorialContent } from '../../data/siteContent'
 import { baseEase } from '../../lib/motion'
 

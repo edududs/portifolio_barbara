@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import arrowRight from '../../assets/arrow-right.svg'
-import { ctaContent } from '../../data/siteContent'
+import { contactInfo, ctaContent } from '../../data/siteContent'
 import { baseEase, viewportAmount } from '../../lib/motion'
 import { Section } from '../layout/Section'
 
@@ -23,7 +23,9 @@ export function CtaSection() {
           {ctaContent.body}
         </p>
         <motion.a
-          href="mailto:barbara@example.com"
+          href={contactInfo.whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mx-auto mt-14 inline-flex h-[60px] items-center gap-4 bg-black px-10 font-accent text-sm tracking-[0.025em] text-white"
           whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.025 }}
           transition={{ duration: 0.28, ease: baseEase }}

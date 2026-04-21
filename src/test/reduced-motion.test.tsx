@@ -48,7 +48,7 @@ describe('Reduced motion support', () => {
     ).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Iniciar Conversa' })).toHaveAttribute(
       'href',
-      'mailto:barbara@example.com'
+      'https://wa.me/5561985341091?text=Ol%C3%A1%20Barbara!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F'
     )
   })
 })

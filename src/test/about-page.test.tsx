@@ -18,6 +18,9 @@ describe('About page', () => {
     ).toBeInTheDocument()
     expect(screen.getByText('Minha Abordagem')).toBeInTheDocument()
     expect(screen.getByText('Meus Princípios')).toBeInTheDocument()
+    expect(
+      screen.getByText('Valores que guiam cada projeto, cada frame, cada palavra')
+    ).toBeInTheDocument()
     expect(screen.getByText('Intencionalidade')).toBeInTheDocument()
     expect(screen.getByText('Excelência Estética')).toBeInTheDocument()
     expect(screen.getByText('Resultados Mensuráveis')).toBeInTheDocument()

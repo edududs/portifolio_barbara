@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { Link } from 'react-router'
-import { navItems } from '../../data/siteContent'
+import { contactInfo, footerNavItems } from '../../data/siteContent'
 import { baseEase, viewportAmount } from '../../lib/motion'
 
 export function SiteFooter() {
@@ -29,7 +29,7 @@ export function SiteFooter() {
               Navegação
             </h3>
             <ul className="mt-4 space-y-3">
-              {navItems.map((item) => (
+              {footerNavItems.map((item) => (
                 <li key={item.href}>
                   <motion.div whileHover={shouldReduceMotion ? undefined : { x: 3 }} transition={{ duration: 0.22 }}>
                     <Link to={item.href} className="font-body text-sm text-footerMuted">
@@ -46,7 +46,9 @@ export function SiteFooter() {
               Social
             </h3>
             <motion.a
-              href="#contato"
+              href={contactInfo.instagramHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 inline-block font-body text-sm text-footerMuted"
               whileHover={shouldReduceMotion ? undefined : { x: -3 }}
               transition={{ duration: 0.22 }}

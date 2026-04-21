@@ -1,4 +1,5 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
+import heroVideo from '../../assets/Instituicional.mp4'
 import heroBackground from '../../assets/hero-bg.jpg'
 import arrowDown from '../../assets/arrow-down.svg'
 import { heroContent } from '../../data/siteContent'
@@ -25,10 +26,27 @@ export function HeroSection() {
   return (
     <section id="topo" className="relative overflow-hidden text-white">
       <motion.div
-        className="absolute inset-0 min-h-[743px] bg-cover bg-center shadow-hero"
-        style={{ backgroundImage: `url(${heroBackground})`, y: backgroundY, scale: shouldReduceMotion ? 1 : 1.03 }}
-      />
-      <div className="absolute inset-0 bg-black/30" />
+        className="absolute inset-0 min-h-[743px] overflow-hidden"
+        style={{ y: backgroundY, scale: shouldReduceMotion ? 1 : 1.03 }}
+      >
+        {shouldReduceMotion ? (
+          <div
+            className="absolute inset-0 bg-cover bg-center shadow-hero"
+            style={{ backgroundImage: `url(${heroBackground})` }}
+          />
+        ) : (
+          <video
+            src={heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={heroBackground}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
+      </motion.div>
+      <div className="absolute inset-0 bg-black/40" />
 
       <SiteHeader />
 
@@ -62,7 +80,7 @@ export function HeroSection() {
           transition={{ duration: 0.78, delay: 0.28, ease: baseEase }}
           whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.015 }}
         >
-          <PrimaryButton className="w-[225px]">{heroContent.cta}</PrimaryButton>
+          <PrimaryButton className="whitespace-nowrap">{heroContent.cta}</PrimaryButton>
         </motion.a>
 
         <motion.img

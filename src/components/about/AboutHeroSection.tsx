@@ -6,9 +6,9 @@ import { SiteHeader } from '../layout/SiteHeader'
 export function AboutHeroSection() {
   return (
     <section className="relative overflow-hidden bg-white pt-6 text-ink">
-      <SiteHeader />
+      <SiteHeader tone="onLight" />
 
-      <div className="mx-auto flex min-h-[703px] max-w-shell flex-col justify-center px-6 pt-24 md:px-10 xl:px-16">
+      <div className="mx-auto flex min-h-[703px] max-w-shell flex-col items-center justify-center px-6 pt-24 text-center md:px-10 xl:px-16">
         <motion.h1
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}

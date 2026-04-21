@@ -15,14 +15,10 @@ describe('App shell', () => {
 
     const primaryNav = screen.getByRole('navigation', { name: 'Primária' })
 
-    expect(within(primaryNav).getByRole('link', { name: 'Sobre' })).toHaveAttribute(
-      'href',
-      '#sobre'
-    )
-    expect(within(primaryNav).getByRole('link', { name: 'Serviços' })).toHaveAttribute(
-      'href',
-      '#servicos'
-    )
+    expect(within(primaryNav).getByRole('link', { name: 'Home' })).toHaveAttribute('href', '/')
+    expect(within(primaryNav).getByRole('link', { name: 'Sobre' })).toHaveAttribute('href', '/sobre')
+    expect(within(primaryNav).getByRole('link', { name: 'Serviços' })).toHaveAttribute('href', '/servicos')
+    expect(within(primaryNav).getByRole('link', { name: 'Contato' })).toHaveAttribute('href', '/contato')
     expect(screen.getByRole('link', { name: /veja meu trabalho/i })).toHaveAttribute(
       'href',
       '#cases'
