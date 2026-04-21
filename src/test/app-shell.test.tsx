@@ -21,7 +21,7 @@ describe('App shell', () => {
     expect(within(primaryNav).getByRole('link', { name: 'Contato' })).toHaveAttribute('href', '/contato')
     expect(screen.getByRole('link', { name: /veja meu trabalho/i })).toHaveAttribute(
       'href',
-      '#cases'
+      '#especializacao'
     )
   })
 })

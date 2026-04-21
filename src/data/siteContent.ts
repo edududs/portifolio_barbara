@@ -8,7 +8,6 @@ export const navItems = [
 export const footerNavItems = [
   { label: 'Sobre', href: '/sobre' },
   { label: 'Serviços', href: '/servicos' },
-  { label: 'Cases', href: '/#cases' },
   { label: 'Contato', href: '/contato' }
 ] as const
 
@@ -171,6 +170,7 @@ export const contactPageHero = {
 
 export const contactInfo = {
   whatsapp: '5561985341091',
+  whatsappDisplay: '61985341091',
   whatsappHref: 'https://wa.me/5561985341091?text=Ol%C3%A1%20Barbara!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F',
   email: 'bfonsecalps@gmail.com',
   emailHref: 'mailto:bfonsecalps@gmail.com',
@@ -181,13 +181,10 @@ export const contactInfo = {
 export const contactWhyContent = {
   title: 'Por Que Trabalhar Comigo',
   bullets: [
-    'Estratégia, criação e execução em uma única profissional — Visão 360°',
-    'Padrão Editorial: Qualidade de revista em cada entrega',
+    'Estratégia, criação e execução em uma única profissional Visão 360°.',
     'Foco em Resultados: Beleza que performa, criatividade que converte',
-    'Conhecimento profundo dos nichos de moda e institucional — 7 Anos de Experiência'
+    'Conhecimento profundo dos nichos de moda e institucional com 7 Anos de Experiência.'
   ],
-  ctaTitle: 'Solicite um Orçamento',
-  ctaLabel: 'Enviar mensagem',
   socialTitle: 'Conecte-se'
 } as const
 

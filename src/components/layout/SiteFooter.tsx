@@ -43,18 +43,38 @@ export function SiteFooter() {
 
           <div className="md:justify-self-end md:text-right">
             <h3 className="font-body text-sm font-semibold tracking-[0.025em] text-white">
-              Social
+              Conecte-se
             </h3>
-            <motion.a
-              href={contactInfo.instagramHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block font-body text-sm text-footerMuted"
-              whileHover={shouldReduceMotion ? undefined : { x: -3 }}
-              transition={{ duration: 0.22 }}
-            >
-              Instagram
-            </motion.a>
+            <div className="mt-4 space-y-3">
+              <motion.a
+                href={contactInfo.instagramHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block font-body text-sm text-footerMuted"
+                whileHover={shouldReduceMotion ? undefined : { x: -3 }}
+                transition={{ duration: 0.22 }}
+              >
+                Instagram ({contactInfo.instagramHandle})
+              </motion.a>
+              <motion.a
+                href={contactInfo.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block font-body text-sm text-footerMuted"
+                whileHover={shouldReduceMotion ? undefined : { x: -3 }}
+                transition={{ duration: 0.22 }}
+              >
+                WhatsApp ({contactInfo.whatsappDisplay})
+              </motion.a>
+              <motion.a
+                href={contactInfo.emailHref}
+                className="block font-body text-sm text-footerMuted"
+                whileHover={shouldReduceMotion ? undefined : { x: -3 }}
+                transition={{ duration: 0.22 }}
+              >
+                {contactInfo.email}
+              </motion.a>
+            </div>
           </div>
         </div>
 

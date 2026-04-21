@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'motion/react'
+import { Link } from 'react-router'
 import fashionImage from '../../assets/specialty-fashion.jpg'
 import institutionalImage from '../../assets/specialty-institutional.jpg'
 import { specialties, specialtiesSubtitle } from '../../data/siteContent'
@@ -16,7 +17,7 @@ export function SpecialtiesSection() {
   const viewport = viewportAmount(shouldReduceMotion)
 
   return (
-    <Section id="cases" className="bg-white py-24 xl:py-28">
+    <Section id="especializacao" className="bg-white py-24 xl:py-28">
       <motion.h2
         variants={sectionReveal}
         initial={shouldReduceMotion ? false : 'hidden'}
@@ -53,6 +54,21 @@ export function SpecialtiesSection() {
             />
           </motion.div>
         ))}
+      </motion.div>
+
+      <motion.div
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        viewport={viewport}
+        transition={{ duration: 0.45, delay: 0.08 }}
+        className="mt-14 flex justify-center"
+      >
+        <Link
+          to="/servicos"
+          className="inline-flex h-12 items-center justify-center border border-ink bg-white px-8 font-body text-sm font-semibold tracking-[0.025em] text-ink transition hover:bg-ink hover:text-white"
+        >
+          Ver serviços completos
+        </Link>
       </motion.div>
     </Section>
   )
