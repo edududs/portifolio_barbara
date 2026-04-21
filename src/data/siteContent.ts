@@ -61,7 +61,7 @@ export const aboutPageHeroContent = {
 
 export const aboutPageEditorialContent = [
   'Sou Barbara Fonseca, especialista em transformar marcas através da interseção entre estética refinada e estratégia comercial inteligente.',
-  'Com 7 anos de experiência em curadoria visual e marketing digital, desenvolvi uma abordagem única que combina sensibilidade artística com métricas de performance. Acredito que beleza e resultados não são excludentes — são complementares.',
+  'Com 7 anos de experiência em marketing digital, desenvolvi uma abordagem única que combina sensibilidade artística com métricas de performance. Acredito que beleza e resultados não são excludentes — são complementares.',
   'Meu trabalho vai além do superficial. Cada projeto é uma oportunidade de criar narrativas visuais que não apenas encantam, mas convertem. É sobre entender profundamente sua marca, seu público e seus objetivos para criar experiências que deixam marca.'
 ] as const
 
@@ -72,7 +72,7 @@ export const aboutApproachSections = [
   },
   {
     title: 'Olhar editorial, resultado comercial',
-    body: 'Minha formação em curadoria visual me permite criar conteúdo que compete com grandes marcas globais. Mas meu foco está nos números: engajamento, conversão, ROI. Beleza que performa.'
+    body: 'Minha formação em design de moda me permite criar conteúdo que compete com grandes marcas globais. Mas meu foco está nos números: engajamento, conversão, ROI. Beleza que performa.'
   },
   {
     title: 'Da captação à entrega final',
