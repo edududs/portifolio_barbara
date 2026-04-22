@@ -67,18 +67,18 @@ export const aboutPageEditorialContent = [
 
 export const aboutApproachSections = [
   {
-    title: 'Estratégia antes da execução',
-    body: 'Antes de ligar a câmera, eu entendo seu negócio. Seu público. Seus objetivos. Cada peça de conteúdo nasce de um briefing estratégico que une SEO, narrativa de marca e objetivos comerciais.'
+    title: "Estratégia antes da execução",
+    body: "Antes de ligar a câmera, eu entendo seu negócio. Seu público. Seus objetivos. Cada peça de conteúdo nasce de um briefing estratégico que une SEO, narrativa de marca e objetivos comerciais.",
   },
   {
-    title: 'Olhar editorial, resultado comercial',
-    body: 'Minha formação em design de moda me permite criar conteúdo que compete com grandes marcas globais. Mas meu foco está nos números: engajamento, conversão, ROI. Beleza que performa.'
+    title: "Olhar editorial, resultado comercial",
+    body: "Minha formação em design de moda me dá o repertório necessário para construir imagens que comunicam a essência da marca com intenção e profundidade.",
   },
   {
-    title: 'Da captação à entrega final',
-    body: 'Domínio técnico completo: conceitualização, direção de fotografia, captação, edição, pós-produção e copy estratégico. Você trabalha com uma profissional, não com uma equipe fragmentada.'
-  }
-] as const
+    title: "Da captação à entrega final",
+    body: "Domínio técnico completo: conceitualização, direção de fotografia, captação, edição, pós-produção e copy estratégico. Você trabalha com uma profissional, não com uma equipe fragmentada.",
+  },
+] as const;
 
 export const aboutPrinciplesSection = {
   title: 'Meus Princípios',
