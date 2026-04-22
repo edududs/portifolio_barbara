@@ -76,7 +76,7 @@ export const aboutApproachSections = [
   },
   {
     title: "Da captação à entrega final",
-    body: "Domínio técnico completo: conceitualização, direção de fotografia, captação, edição, pós-produção e copy estratégico. Você trabalha com uma profissional, não com uma equipe fragmentada.",
+    body: "Domínio técnico completo: conceitualização, direção de fotografia, captação, edição, pós-produção e copy estratégico.",
   },
 ] as const;
 
@@ -143,7 +143,7 @@ export const servicesList = [
   {
     tag: 'Presença estratégica',
     title: 'Gestão de Redes Sociais',
-    body: 'Gestão completa de redes sociais com foco em crescimento orgânico, engajamento qualificado e conversão.',
+    body: 'Gestão completa de redes sociais com foco em crescimento orgânico, engajamento e conversão',
     bullets: ['Planejamento e execução de conteúdo', 'Gerenciamento de comunidade', 'Análise de métricas e relatórios', 'Otimização de perfis', 'Growth hacking estratégico'],
     image: 'redesSociais' as const,
     imageLeft: true
